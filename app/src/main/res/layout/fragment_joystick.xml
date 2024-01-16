@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JoystickFragment"
+    android:id="@+id/joystickContainer">
+
+    <Toolbar
+        android:id="@+id/toolbarhub"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/round" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title_toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="JoyStick Controller"
+                android:textColor="@color/white"
+                android:textSize="35dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/wifiJoystick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarhub"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/border"
+        android:backgroundTint="#FFEDAE"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/textIp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Ip Address: "
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textPort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textIp"
+            android:text="Port: "
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/joystickBase"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/joystick_base" />
+
+
+    <ImageButton
+        android:id="@+id/joystickHandle"
+        android:layout_width="120dp"
+        android:layout_height="128dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="46dp"
+        android:background="@drawable/joystick_handle" />
+
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/wifiJoystick"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="63dp"
+        android:text="A"
+        android:textSize="35dp"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="40dp"
+        android:layout_toLeftOf="@+id/button3"
+        android:text="B"
+        android:textSize="35dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="10dp"
+        android:text="D"
+        android:textSize="35dp"/>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_above="@id/dicrectJoystick"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="60dp"
+        android:text="C"
+        android:textSize="35dp"/>
+
+
+
+    <RelativeLayout
+        android:id="@+id/dicrectJoystick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/joystickBase"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/border"
+        android:backgroundTint="#A1F0FA"
+        android:padding="10dp">
+
+    <TextView
+        android:id="@+id/directionTextView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Forward/Backward: "
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:padding="8dp"/>
+
+        <TextView
+
+            android:id="@+id/directionTextView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Left/Right: "
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_below="@id/directionTextView1"
+            android:padding="8dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dicrectJoystick"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/border"
+        android:backgroundTint="#A1F0FA"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/actionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Action: "
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:padding="8dp"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

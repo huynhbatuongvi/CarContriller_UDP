@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SettingFragment">
+
+
+    <Toolbar
+        android:id="@+id/toolbarsetting"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/round">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title_toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Settings"
+                android:textColor="@color/white"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </Toolbar>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/roundsetting"
+        android:backgroundTint="#FF5F5F"
+        android:padding="15dp">
+
+        <EditText
+            android:id="@+id/editTextIPAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/roundsetting"
+            android:backgroundTint="@color/white"
+            android:hint="IP Address:"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextPort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextIPAddress"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/roundsetting"
+            android:backgroundTint="@color/white"
+            android:hint="Port:"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/buttonSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextPort"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/roundback"
+            android:text="Connected" />
+
+        <Button
+            android:id="@+id/buttonDisconnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextPort"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/roundback"
+            android:text="Disconnect" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="13dp"
+        android:padding="10dp"
+        android:text="Status:  "
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

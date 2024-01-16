@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment"
+    android:id="@+id/homefragment">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lavender">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/btnBack"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:src="@drawable/baseline_arrow_back_ios_new_24"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <!--
+                android:background="@android:color/transparent":đặt màu nền cho một phần tử giao diện
+                 android:src="@drawable/baseline_arrow_back_ios_new_24":xác định nguồn hình ảnh để hiển thị
+                 tools:ignore="SpeakableTextPresentCheck": bỏ qua các cảnh báo kiểm tra của công cụ
+               -->
+
+                <TextView
+                    android:id="@+id/title_toolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="RoomName"
+                    android:textSize="30dp" />
+
+            </RelativeLayout>
+
+        </Toolbar>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleview_room"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="65dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="540dp"
+            android:layout_marginRight="30dp"
+            android:src="@drawable/baseline_add_24"
+            app:tint="@color/white"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <!--
+      android:src="@drawable/baseline_add_24":xác định nguồn hình ảnh để hiển thị
+      app:tint="@color/white":chỉ định một màu sắc để tô
+      tools:ignore="SpeakableTextPresentCheck":bỏ qua các cảnh báo kiểm tra của công cụ
+        -->
+
+</RelativeLayout>
+
+</FrameLayout>
